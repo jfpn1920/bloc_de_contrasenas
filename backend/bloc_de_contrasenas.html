@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bloc de contraseñas</title>
+    <link rel="stylesheet" href="bloc_de_contrasenas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="bloc_de_contrasenas.js" defer></script>
+</head>
+<body>
+    <!--------------------------------------->
+    <!--|estructurando_bloc_de_contraseñas|-->
+    <!--------------------------------------->
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Bloc de contraseñas</h1>
+        </div>
+        <form>
+            <label>Agregar el usuario</label>
+            <input
+                type="text"
+                placeholder="Escribe el usuario..."
+            >
+            <label>Agrega correo electrónico</label>
+            <input
+                type="email"
+                placeholder="Escribe el correo..."
+            >
+            <label>Agrega contraseña</label>
+            <input
+                type="password"
+                placeholder="Escribe la contraseña..."
+            >
+            <label>Seleccionar la categoría</label>
+            <select>
+                <option>Ninguna categoría...</option>
+                <option>Redes sociales</option>
+                <option>Correo electrónico</option>
+                <option>Bancos</option>
+                <option>Trabajo</option>
+                <option>Juegos</option>
+            </select>
+            <label>Colocar la fecha de creación</label>
+            <div class="contenedor_fecha">
+                <div class="icono_calendario">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <input
+                    type="date"
+                >
+            </div>
+            <button type="submit">
+                Guardar contraseñas
+            </button>
+        </form>
+    </div>
+    <!--------------------------------------------->
+    <!--|estructurando_contadores_de_contraseñas|-->
+    <!--------------------------------------------->
+    <div class="contenedor_indicadores">
+        <div class="tarjeta">
+            <div class="encabezado">
+                <h2>Total de contraseñas</h2>
+            </div>
+            <div class="contenido">
+                <span id="total_contrasenas">
+                    0
+                </span>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="encabezado">
+                <h2>Categorias</h2>
+            </div>
+            <div class="contenido">
+                <span id="total_categorias">
+                    0
+                </span>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------>
+    <!--|estructurando_tablero_de_contraseñas|-->
+    <!------------------------------------------>
+    <div class="contenedor_tablero">
+        <div class="titulo_tablero">
+            <h2>Tablero de contraseñas</h2>
+        </div>
+        <div class="contenedor_scroll_tablero">
+            <table>
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Usuarios</th>
+                        <th>Correo electronico</th>
+                        <th>Contraseña</th>
+                        <th>Categorias</th>
+                        <th>Fecha de creacion</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="contenedor_tabla">
+                    <tr>
+                        <td
+                            colspan="7"
+                            class="sin_registros"
+                        >
+                            Ningun contraseña añadido en el tablero
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
